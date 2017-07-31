@@ -5,7 +5,7 @@ const hbs = require('hbs');
 const path = require('path');
 const fs = require('fs');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const app = express();
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
 app.set('view engine', 'hbs');
@@ -39,6 +39,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Portfolio'
   });
 });
 
