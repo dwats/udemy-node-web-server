@@ -31,8 +31,7 @@ hbs.registerHelper('screamIt', text => text.toUpperCase());
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    pageTitle: 'Hi.',
-    welcomeMessage: ''
+    pageTitle: 'Eric Juli.us'
   });
 });
 
