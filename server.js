@@ -31,22 +31,22 @@ hbs.registerHelper('screamIt', text => text.toUpperCase());
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    pageTitle: 'Home Page',
-    welcomeMessage: 'Hello, World!'
+    pageTitle: 'Hi.',
+    welcomeMessage: ''
   });
 });
 
-app.get('/about', (req, res) => {
-  res.render('about.hbs', {
-    pageTitle: 'About Page'
-  });
-});
-
-app.get('/projects', (req, res) => {
-  res.render('projects.hbs', {
-    pageTitle: 'Portfolio'
-  });
-});
+// app.get('/about', (req, res) => {
+//   res.render('about.hbs', {
+//     pageTitle: 'About Page'
+//   });
+// });
+//
+// app.get('/projects', (req, res) => {
+//   res.render('projects.hbs', {
+//     pageTitle: 'Portfolio'
+//   });
+// });
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
